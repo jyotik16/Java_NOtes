@@ -1,0 +1,4 @@
+https://www.geeksforgeeks.org/enum-in-java/
+https://www.journaldev.com/716/java-enum
+https://www.javatpoint.com/enum-in-java
+tutorials.jenkov.com/java/enums.html
