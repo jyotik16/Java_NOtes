@@ -1,0 +1,32 @@
+https://www.amazon.com/Java-Programming-Interviews-Exposed-Markham/dp/1118722868
+
+
+
+
+Java Programming Interviews Exposed 1st Edition
+by Noel Markham  (Author)
+
+Product Details
+Paperback: 384 pages
+Publisher: Wrox; 1 edition (February 17, 2014)
+Language: English
+ISBN-10: 1118722868
+ISBN-13: 978-1118722862
+
+
+
+If you are a skilled Java programmer but are concerned about the Java coding interview process, this real-world guide can help you land your next position
+Java is a popular and powerful language that is a virtual requirement for businesses making use of IT in their daily operations. For Java programmers, this reality offers job security and a wealth of employment opportunities. But that perfect Java coding job won't be available if you can't ace the interview. If you are a Java programmer concerned about interviewing, Java Programming Interviews Exposed is a great resource to prepare for your next opportunity. Author Noel Markham is both an experienced Java developer and interviewer, and has loaded his book with real examples from interviews he has conducted.
+
+Review over 150 real-world Java interview questions you are likely to encounter
+Prepare for personality-based interviews as well as highly technical interviews
+Explore related topics, such as middleware frameworks and server technologies
+Make use of chapters individually for topic-specific help
+Use the appendix for tips on Scala and Groovy, two other languages that run on JVMs
+Veterans of the IT employment space know that interviewing for a Java programming position isn't as simple as sitting down and answering questions. The technical coding portion of the interview can be akin to a difficult puzzle or an interrogation. With Java Programming Interviews Exposed, skilled Java coders can prepare themselves for this daunting process and better arm themselves with the knowledge and interviewing skills necessary to succeed
+
+
+KAT - C4dr
+TBP - shailab
+
+BTC - 1CZ4nTozpgfgqufWhiXDtBu9pVurd41SPz
