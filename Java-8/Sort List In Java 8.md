@@ -65,7 +65,7 @@ public class Sort_Lsit_In_Java8 {
 		employeeList.add(e4);
 	}
 	
-	public static void covertListToMap() {
+	>public static void covertListToMap() {
 		Map<String, List<Employee>> empMap = employeeList
 				.stream()
 				.collect(Collectors.groupingBy(Employee::getCity));
@@ -76,10 +76,10 @@ public class Sort_Lsit_In_Java8 {
 		 * for(Entry<String,List<Employee>> e:keySet) {
 		 * System.out.println(e.getKey()+" "+e.getValue()); }
 		 */
-		empMap.forEach((K,V)->System.out.println(K+" "+V));
+		**empMap.forEach((K,V)->System.out.println(K+" "+V));**
 	}
 			
-	public static void sortEmployeeListByComparator() {
+	>public static void sortEmployeeListByComparator() {
 		
 		//classic way 
 	/*	Collections.sort(employeeList,new Comparator() {
@@ -102,7 +102,7 @@ public class Sort_Lsit_In_Java8 {
 		System.out.println(employeeList);
 	}
 	
-	static void sortEmployeeListByStream() {
+	>static void sortEmployeeListByStream() {
 		List<Employee> sortedList = employeeList.stream().sorted().collect(Collectors.toList());
 	//	List<Employee> reverseSortedList = employeeList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 		System.out.println(sortedList);
