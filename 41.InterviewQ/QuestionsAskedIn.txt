@@ -1,0 +1,9 @@
+
+Why method hiding concept introduced in the Java?
+What is stateful Intermediate Operations?
+What is Difference between Terminal And Intermediate Operations?
+Is functionalInterface extends other functionalInterface ?
+What is Internal Implementations of Set?
+What is Metaspace Or Permgem?
+How 
+
