@@ -1,0 +1,106 @@
+
+class Airthmetic {
+
+public int sum(int a,int b){
+	return a+b;
+}
+
+}
+
+
+class Airthmetic {
+
+private static Aithmetic INSTANCE;
+
+private static boolean isInStantiated=false;
+
+	private Airthmetic (){
+		if(isInStantiated){
+			throw new RuntimeException("Object is Already Created!");
+		isInStantiated=true;	
+	}
+ 
+
+	public static Airthmetic  getInstance(){
+
+		if(INSTANCE == null){
+
+			synchronized(Airthmetic.class){
+				if(INSTANCE == null)
+					INSTANCE = new Airthmetic ();							
+			}
+		
+		}
+		return INSTANCE;
+
+	}
+	
+	@Override
+	public Object clone(){
+		return throw new CloneNotSupportedException("Object is Already Created!");
+	}	
+
+	public readResolve(){
+	return INSTANCE;	
+	}
+
+	public int sum(int a,int b){
+	return a+b;
+	}
+
+}
+
+
+=========================================INNER CLASS Based LAZY INSTANTION(best2)
+
+class Printer{
+
+	private Printer(){
+		Sustem.out.println("0-param constructor");
+	}
+
+	private static class innerPrinter{
+		private static 	Printer INSTANCE = new Printer();
+	}
+
+	public static getIntance(){
+		return innerPrinter.INSTANCE;
+	}
+	//Buissness method
+	public void getMessage(){
+		Stem.out.println("messgae");	
+	}
+
+	@Override
+	public Object clone(){
+		return throw new CloneNotSupportedException("Object is Already Created!");
+	}	
+
+	public readResolve(){
+	return INSTANCE;	
+	}
+
+}
+
+=========================================ENUM Based (best3)
+
+
+
+Class Enum{
+
+	INSTANCE; //EAGER INSTANTION
+
+	public static getIntance(){
+		return Enum.INSTANCE;
+	}
+
+	//Buissness method
+	public void getMessage(){
+		Stem.out.println("messgae");	
+	}
+
+}
+
+
+
+

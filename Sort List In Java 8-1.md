@@ -201,6 +201,38 @@ number start with 1
 15
 ```
 
+### Find Nth Highest Salary
+
+```scala
+private static void NthHighstSalary() {
+   List<employee> emp = new ArrayList<>();
+
+          emp.add(new employee(1,80000));
+          emp.add(new employee(2,87000));
+          emp.add(new employee(3,90000));
+          emp.add(new employee(4,70000));      
+     //Method - 1      
+
+          Optional<employee> nthsalaryEmp = emp.stream()
+
+                .sorted(Comparator.comparingDouble(employee::getSalary).reversed())
+
+                   .skip(1).findFirst();
+
+          System.out.println(nthsalaryEmp);    
+
+     }
+
+    private static void StreamMethodDemo() {
+
+          	List<Integer> list =Arrays.asList(1,2,3,4,5);
+     		Optional<Integer> ans = list.stream().reduce((a,b)->a>b?a:b);
+    		System.out.println(ans);
+   }
+
+
+```
+
 
 
 
