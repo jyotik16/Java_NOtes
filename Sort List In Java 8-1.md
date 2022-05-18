@@ -2,15 +2,12 @@
 
 ```scala
 //anonymous class*****************
-
-		countryList.stream().forEach(
-		
+		countryList.stream().forEach(	
 		   new Consumer<String>() {		
 		               @Override		
 		               public void accept(String country) {		
 		                           System.out.print(country+" ");		
-		               }     
-		
+		               } 	
 		});
 
 //lamdba******************
@@ -28,21 +25,16 @@ countryList.stream().forEach(System.out::print);
 
 #### Get Duplicate list And list without Duplicate
 
-```scala
+```javascript
 private static void getDuplicate() {
 
 List<Integer> myList2 = Arrays.asList(10,15,8,49,25,98,98,32,15);
-
-    Set<Integer> set = new HashSet<>();
-    myList2.stream()
-          .filter(n -> set.add(n))
-          .forEach(System.out::println);	
-    
+  
     Set<Integer> set2 = new HashSet<>();
     System.out.print("@@");
    List<Integer> withoutDuplicates =  myList2.stream()
            			.filter(n -> set2.add(n))
-           			.map(n->n)         											.collect(Collectors.toList());
+           			.map(n->n)         																		.collect(Collectors.toList());
    System.out.println(withoutDuplicates);
    
    Set<Integer> set3 = new HashSet<>();
@@ -54,8 +46,6 @@ List<Integer> myList2 = Arrays.asList(10,15,8,49,25,98,98,32,15);
    }
 ```
 ```scala
-[10,15,8,49,25,98,32,15]
-@@
 [10,15,8,49,25,98,32,15]
 @@
 [98]
@@ -122,14 +112,12 @@ static class demo {
 String input = "aaabbccdfe";
 
         Map<Character, Long> map2 = input.codePoints()//streams
-
-                 .mapToObj(s -> Character.valueOf((char) s)) // First convert to Character object and then to lowercase                   .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
+                 .mapToObj(s -> Character.valueOf((char) s)) 
+                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, 					Collectors.counting()));
 
 	  	 Map<Character, Long> map = input.chars()//streams
-
-                   .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) // First convert to Character object and then to lowercase        
-
-                    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
+                   .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) // First convert to Character object and then to lowercase  
+                    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, 					Collectors.counting()));
 
   	 for(Entry<Character, Long> xx:map2.entrySet()) {
        System.out.print(xx.getKey()+"->"+xx.getValue()+", ");
@@ -142,9 +130,8 @@ a->3, b->2, c->2, d->1, f->1, e->1,
 
 #### Find non repeat character by using above code
 
-```scala
+```java
 //now find the only non repeated character
-
       List<Character> list = map.entrySet().stream()
 
       .filter(e->e.getValue()==1)
@@ -214,13 +201,9 @@ private static void NthHighstSalary() {
      //Method - 1      
 
           Optional<employee> nthsalaryEmp = emp.stream()
-
-                .sorted(Comparator.comparingDouble(employee::getSalary).reversed())
-
+                .sorted(Comparator.comparingDouble(employee::getSalary).reversed()
                    .skip(1).findFirst();
-
-          System.out.println(nthsalaryEmp);    
-
+          System.out.println(nthsalaryEmp); 
      }
 
     private static void StreamMethodDemo() {

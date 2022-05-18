@@ -1,0 +1,185 @@
+Q.=================================================
+package com.journaldev.programming-interviews;
+
+public class String Programs {
+
+ static void main(String[10] args) {
+	String s = "abc"
+	System.out.println(s);
+}
+}
+Q.===================================================
+String str ="abca";
+
+public void find(String str){
+	findPalindrome(str,0);
+}
+public boolean findPalindrome(String str,int i,int e){
+	if(i == e) return true;
+	if(str.charAt(i) != str.charAt(e))
+	return false;
+	return findPalindrome(str,i+1,e-1);
+}
+=========================================================
+Q.
+class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; 1; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+Create table Employee_table(
+int empid PRIMARY KEY,
+varchar(255) empname 
+);
+Q.=====================================================================
+
+SELECT  o.orderId,c.customername,o.orderdate 
+FROM Custormer_table c INNER JOIN Order_table o on c.customerId = o.custormerId ;
+
+Q.=============================================
+List<String> employeeList = list.stream().
+				filter(e->e.getAge()>20).map(e->e.getName()).
+				collect(Collectros.toList()); 
+
+
+Q.============================================
+String str="ReverseAString";
+public static void reverse(String str){
+
+char [] ar = str.toCharArray();
+
+int left = 0; int right = ar.length-1;
+
+while(left<=right){
+
+char ch = ar[left];
+ar[left] = ar[right];
+ar[right] = ch;
+
+left++;
+right--;
+}
+
+}
+Q.=======================================================
+int arr [] = {1,0,2,3,0,4,0,0,5};
+
+public stativ moveZero(int [] ar){
+
+	int i =0; int j=0;
+	int n =ar.length;
+	while(i<n){
+	if(ar[i]== 0){
+		i++;
+	}else{
+	swap(ar,i,j);
+	i++; j++;		
+	}
+	
+	}
+
+}
+
+void swap(int [] ar,int i,int j){
+	int temp = ar[i];
+	ar[i] = ar[j];
+	ar[j] = temp;
+}
+
+Q.====================================
+
+List->employeeList
+employeeList.stream().filter(e->e.getEmployeeId()%2 !=0).collect(Collectors.toList());
+
+HashMap<Integer,Employee> map = new HashMap<>();
+
+for(Map.Entry<Integer,Employee> em:map.entrySet()){
+	Employee e = em.getValue();
+	System.out.print(e.getEmploye);
+
+}
+Q.
+spring.datasource.url=
+spring.datasource.username
+spring.datasource.password
+
+
+Q.Covariant Method (Java 5)?
+Q.can server.port = 0 ? is it possible to used?
+Q.can we apply crud operation on view ? yes only when view made for one table..in case of complex view (made by more than one table) 
+  crud operations not possible.
+Q.How the API concurrency handle? @Version maintain the version so that database consistency is maintained.
+Q.How we identify that this is API hit to server is fake (at java level how can we handle)? 
+Q.How we identify/dectect the Deadlock in our system ?
+Q.How to resolve the OutOfmemory issue in Java? ->To increase the Heap Size of JVM 
+Q.What do you mean by memory leak ? when someone allocate the memory but that memory is not deallocate ..
+Q. What is difference between Iterator && Iterable?
+
+=============================================================
+Interface customer{
+void business();
+}
+Class test implements customer{
+void buiness(){
+}
+}
+Class retailCustomer extends test{
+void buiness(){
+}
+}
+Class wholesaleCustomer extends test{
+void buiness(){
+}
+}
+class onlineCustomer extends test{
+void buiness(){
+}
+}
+public static void main(String []arg){
+
+test object = null;
+String type="Whole_Sale";
+if(type.equal(Enum.Whole_Sale)){
+	object = new wholesaleCustomer();
+}
+
+HashMap<String,Customer> map = new HashMap<>();
+map.put(ENUM.whole_sale,new wholesaleCustomer());
+===========================================================
+}
+
+
+Q.Minimum No Of Jump to reach the end of Array?
+Q.Connect nodes at the same level of a binary tree. (Given extra next pointer)
+Q.Minimum time required to rot all oranges?
+Q.Differences between B TREES AND B+TREES.?
+Q.Shortest path in the graph?
+Q.LRU Cache?
+Q.Top/Bottom view of a binary tree ?
+Q.Stack elements reverse (recursion)
+Q.Two Sum PRoblem?
+Q.Find the number in a sorted rotated array in LogN complexity
+Q.Find duplicates in LinkedList?
+Q.You are given string having "{(})[]" and you have to that string has valid bracketting or not?
+Q.Post order traversal of a binary tree. Implement it without recursion.
+Q.What is binary search and how will you choose a pivot value. What if you have rotated array and do the search on it. How to do that?
+Q.Given an array of integers, find the length of the longest sub-sequence such that 
+elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
+Q.zig zag tree traversal?
+Q.Find if array is sorted and rotated?
+Q.Find next greatest number in array( use stack or recursion)?
+Q.Java Snychronized  Block Vs Snychronized  method?
+Q.Second Level Cacehing in hibernate? 
+Q.difference between spring java class and java singleton class?
+
+
+
+
+
+
+
+
+
