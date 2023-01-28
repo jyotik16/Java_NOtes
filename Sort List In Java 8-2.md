@@ -93,7 +93,27 @@ public class EmployeeTest {
 		fun5();
 		//find the Avg,Sum,Total Of Employee Salary
 		fun6(employeeList);
+		//update the salary by 5K if sal of emp is less than 10K
+		updateSalaryBy5K(employeeList);
 	}
+	
+	private static void printData(List<Employee> employeeList) {
+        employeeList.stream().forEach(System.out::println);
+    }
+
+    private static void updateSalaryBy5K(List<Employee> employeeList) {
+        long sal = 10L;
+       List<Employee> filetredList = employeeList.stream().filter(emp->emp.getSalary()>sal).collect(Collectors.toList());
+
+       long incsal = 5L;
+        List<Employee> filetredList2 = employeeList.stream().filter(emp->emp.getSalary()<sal)
+                        .map(emp->{
+                            emp.setSalary(emp.getSalary()+incsal);
+                            return emp;
+                        }
+                        ).collect(Collectors.toList());
+        printData(filetredList2);
+    }
 	
 	private static void fun6(List<Employee> employeeList) {
 		System.out.println();
