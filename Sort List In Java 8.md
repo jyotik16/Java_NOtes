@@ -124,6 +124,71 @@ public class Sort_Lsit_In_Java8 {
 	}
 
 }
+
+private static void removeCharactesInString() {
+        String string = "cbacdcbc";
+
+      System.out.println("***** print  non duplicate characters *****");
+      Set<Character> l = string.chars()
+                .mapToObj(item -> (char) item)
+                .collect(Collectors.toSet());
+        l.stream().forEach(System.out::println); //print only duplicate element
+        // difference in retrun type
+        Set<Character> set = new HashSet<>();
+        List<Character> res = string.chars()
+                .mapToObj(item->(char)item).
+                filter(e->set.add(e)).collect(Collectors.toList());
+        res.stream().forEach(System.out::println);
+    }
+
+    private static void removeDuplicateInStrings() {
+        String orignalString = "world world";
+
+        String output = Arrays.asList(orignalString.split(""))
+                .stream()
+                .distinct()
+                .collect(Collectors.joining());
+
+        System.out.println("Original String : " + orignalString);
+        System.out.println("After removing the duplicates : " + output);
+
+    }
+    
+    private static void FindSecondLargestNumberInAnArraysUsingJava8Stream() {
+        // random numbers Array
+        int[] numbers = {5, 9, 11, 2, 8, 21, 1,21}; //[1,2,5,8,9,11,21,21]
+
+        // print to console
+        System.out.println("Numbers in an Arrays : "+ Arrays.toString(numbers));
+        int n = 2;
+        // sort in descending-order and get 2nd largest element
+        int secondLargestNumber = Arrays
+                .stream(numbers)
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .distinct()
+                .skip(n-1)
+                .findFirst()
+                .get();
+        System.out.println(secondLargestNumber);
+       // Stream<Integer> res= Arrays.stream(numbers).boxed(); Array ko stream<Integer> convert by boxed()
+       // System.out.println(res);
+
+        //By using limit()
+        List<Integer> numbersList = Arrays.asList(5, 9, 11, 2, 8, 21, 1);
+        int secondLargestNumber2 = numbersList
+                .stream()
+                .sorted(Comparator.reverseOrder())
+                .distinct()
+                .limit(n)
+                .skip(n-1)
+                .findFirst()
+                .get();
+        System.out.println(secondLargestNumber2);
+
+    }
+    
+    
 Sorting Examples in Java 8
 1. Sort Array of Strings ignoring the case and print them to System out
 public void sortStrings() {
